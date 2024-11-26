@@ -511,8 +511,6 @@ class VisionTransformerWithAttnPool(nn.Module):
         # with deepspeed.zero.Init(mem_efficient_linear=False, enabled=is_deepspeed_zero3_enabled() ):
         #     model = cls(**kawrgs)
         if pretrained_model_path is not None:
-            import os
-
             if not os.path.isfile(pretrained_model_path):
                 from ..hf_download import download_file_from_hf
 
