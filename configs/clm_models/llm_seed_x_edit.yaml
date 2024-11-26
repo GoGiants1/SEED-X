@@ -1,3 +1,4 @@
-  _target_: src.models.mllm.modeling_llama_xformer.LlamaForCausalLM.from_pretrained
-  pretrained_model_name_or_path: pretrained/seed_x_edit/llm
-  low_cpu_mem_usage: True
+_target_: src.models.mllm.modeling_llama_xformer.LlamaForCausalLM.from_pretrained
+pretrained_model_name_or_path: AILab-CVC/SEED-X-17B
+subfolder: seed_x_edit/llm
+low_cpu_mem_usage: True

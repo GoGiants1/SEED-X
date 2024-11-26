@@ -15,4 +15,5 @@ resampler:
 
 vit_down: True
 
-pretrained_model_path: pretrained/seed_detokenizer/first_stage/pytorch_model.bin
+pretrained_model_path: seed_detokenizer/first_stage/pytorch_model.bin
+repo_id: AILab-CVC/SEED-X-17B

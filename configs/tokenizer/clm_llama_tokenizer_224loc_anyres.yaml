@@ -1,2 +1,3 @@
 _target_: transformers.LlamaTokenizer.from_pretrained
-pretrained_model_name_or_path: pretrained/cvlm_llama2_tokenizer_100img_and_224loc_addpatch
+pretrained_model_name_or_path: AILab-CVC/seed-x-17b-pretrain
+subfolder: cvlm_llama2_tokenizer_100img_and_224loc_addpatch

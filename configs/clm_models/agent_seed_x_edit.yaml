@@ -20,4 +20,5 @@ mse: True
 lm_loss_scale: 1.0
 rec_loss_scale: 6.0
 
-pretrained_model_path: pretrained/seed_x_edit/agent/pytorch_model.bin
+pretrained_model_path: seed_x_edit/agent/pytorch_model.bin
+repo_id: AILab-CVC/SEED-X-17B
