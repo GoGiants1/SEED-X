@@ -72,8 +72,15 @@ class SDXLAdapter(nn.Module):
 
     @classmethod
     def from_pretrained(cls, unet, resampler, pretrained_model_path=None, **kwargs):
+        repo_id = kwargs.pop("repo_id", None)
         model = cls(unet=unet, resampler=resampler, **kwargs)
         if pretrained_model_path is not None:
+            if not os.path.isfile(pretrained_model_path):
+                from ..hf_download import download_file_from_hf
+
+                pretrained_model_path = download_file_from_hf(
+                    pretrained_model_path, repo_id
+                )
             ckpt = torch.load(pretrained_model_path, map_location="cpu")
             missing, unexpected = model.load_state_dict(ckpt, strict=False)
             print("missing keys: ", len(missing), "unexpected keys:", len(unexpected))
